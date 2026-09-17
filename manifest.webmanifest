@@ -1,1 +1,9 @@
-{"name":"Telekom Concierge Pro Max 5.0","short_name":"Concierge","display":"standalone","background_color":"#D10074","theme_color":"#D10074","start_url":"./","icons":[{"src":"icons/icon.svg","sizes":"any","type":"image/svg+xml"}]}
+{
+"name":"Telekom Concierge AI 6.0",
+"short_name":"Concierge AI",
+"display":"standalone",
+"background_color":"#D10074",
+"theme_color":"#D10074",
+"start_url":"./",
+"icons":[{"src":"icons/icon.svg","sizes":"any","type":"image/svg+xml"}]
+}

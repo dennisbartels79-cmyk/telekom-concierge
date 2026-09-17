@@ -1,8 +1,7 @@
-# Telekom Concierge Pro Max 5.0
+# Telekom Concierge AI 6.0
 
-## Update über GitHub
+## Upgrade
 
 1. ZIP entpacken.
-2. Die Dateien `index.html`, `manifest.webmanifest`, `sw.js` und den Ordner `icons` in dein bestehendes Repository `telekom-concierge` hochladen und die vorhandenen Dateien ersetzen.
-3. GitHub Pages veröffentlicht die Änderungen automatisch.
-4. Auf dem iPhone die Web-App öffnen und einmal nach unten ziehen, um die neue Version zu laden.
+2. `index.html`, `manifest.webmanifest`, `sw.js` und `icons` in dein bestehendes Repository `telekom-concierge` hochladen und vorhandene Dateien ersetzen.
+3. GitHub Pages aktualisiert die App automatisch.
