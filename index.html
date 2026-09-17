@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta name="theme-color" content="#D10074">
+
+<title>Telekom Concierge Pro Max</title>
+
+<style>
+
+:root{
+
+  --magenta:#D10074;
+
+  --dark:#7A0046;
+
+  --glass:rgba(255,255,255,.16);
+
+}
+
+*{box-sizing:border-box;}
+
+body{
+
+  margin:0;
+
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+  background:linear-gradient(180deg,#D10074,#4A002C);
+
+  color:white;
+
+}
+
+.wrap{
+
+  max-width:820px;
+
+  margin:auto;
+
+  padding:20px;
+
+}
+
+.card{
+
+  background:var(--glass);
+
+  backdrop-filter:blur(22px);
+
+  -webkit-backdrop-filter:blur(22px);
+
+  border:1px solid rgba(255,255,255,.18);
+
+  border-radius:28px;
+
+  padding:20px;
+
+  margin-bottom:18px;
+
+}
+
+.hero{text-align:center;}
+
+#days{
+
+  font-size:56px;
+
+  font-weight:800;
+
+  margin:10px 0;
+
+}
+
+.small{
+
+  opacity:.9;
+
+  font-size:15px;
+
+}
+
+.bar{
+
+  margin-top:16px;
+
+  height:12px;
+
+  background:rgba(255,255,255,.25);
+
+  border-radius:999px;
+
+}
+
+.fill{
+
+  height:100%;
+
+  width:0%;
+
+  background:white;
+
+  border-radius:999px;
+
+}
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,minmax(0,1fr));
+
+  gap:12px;
+
+}
+
+@media(max-width:560px){
+
+  .grid{grid-template-columns:1fr;}
+
+}
+
+button{
+
+  border:none;
+
+  border-radius:18px;
+
+  padding:16px;
+
+  background:white;
+
+  color:var(--dark);
+
+  font-size:16px;
+
+  font-weight:700;
+
+}
+
+button:active{
+
+  transform:scale(.98);
+
+}
+
+.white{
+
+  background:white;
+
+  color:#111;
+
+  border-radius:18px;
+
+  padding:14px;
+
+}
+
+label{
+
+  display:flex;
+
+  gap:10px;
+
+  margin:10px 0;
+
+  align-items:center;
+
+}
+
+input[type=checkbox]{
+
+  transform:scale(1.2);
+
+}
+
+footer{
+
+  text-align:center;
+
+  padding:30px;
+
+  opacity:.75;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="card hero">
+
+<svg width="72" height="72" viewBox="0 0 72 72">
+
+<rect width="72" height="72" rx="18" fill="white"/>
+
+<text x="36" y="46" text-anchor="middle" font-size="32" font-family="Arial" fill="#D10074">T</text>
+
+</svg>
+
+<h1>Telekom Concierge Pro Max</h1>
+
+<div id="days">–</div>
+
+<div id="next" class="small"></div>
+
+<div class="bar">
+
+<div id="fill" class="fill"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Vertragsstatus</h2>
+
+<div class="white">
+
+<p>✔ MagentaMobil L (7. Gen. 2025)</p>
+
+<p>✔ PlusKarte (1. Gen.)</p>
+
+<p>✔ MagentaZuhause L</p>
+
+<p>✔ MagentaTV SmartStream</p>
+
+<p><b>Mobilfunk: 79,90 €</b></p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Spar-Dashboard</h2>
+
+<div class="white">
+
+<p>🎯 Nächste Ziele</p>
+
+<ul>
+
+<li>120 € Treuebonus prüfen</li>
+
+<li>Cashback beobachten</li>
+
+<li>PlusKarte modernisieren</li>
+
+</ul>
+
+<p id="bonus"></p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Schnellaktionen</h2>
+
+<div class="grid">
+
+<button onclick="cash()">💰 Cashback</button>
+
+<button onclick="hotline()">☎️ Hotline</button>
+
+<button onclick="reise()">✈️ Reise</button>
+
+<button onclick="prio()">🎵 Prio</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Checkliste</h2>
+
+<label><input id="c1" type="checkbox"> Kündigung bestätigt</label>
+
+<label><input id="c2" type="checkbox"> 120 € Treuebonus geprüft</label>
+
+<label><input id="c3" type="checkbox"> PlusKarte modernisiert</label>
+
+<label><input id="c4" type="checkbox"> 5G+ Ultra getestet</label>
+
+</div>
+
+<div class="card">
+
+<h2>Hannover Live Guide</h2>
+
+<div class="grid">
+
+<button onclick="map('ZAG Arena Hannover')">ZAG Arena</button>
+
+<button onclick="map('Heinz von Heiden Arena Hannover')">HvH Arena</button>
+
+<button onclick="map('Expo Plaza Hannover')">Expo Plaza</button>
+
+<button onclick="map('Telekom Shop Hannover')">Telekom Shop</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Rückgewinnungs-Spickzettel</h2>
+
+<div class="white">
+
+<p>Beim Anruf fragen:</p>
+
+<ul>
+
+<li>Bleibt Unlimited erhalten?</li>
+
+<li>Bleibt MagentaEINS erhalten?</li>
+
+<li>120 € Treuebonus?</li>
+
+<li>Neue PlusKarte möglich?</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Offline gespeichert · Optimiert für iPhone
+
+</footer>
+
+<script>
+
+const target=new Date("2027-08-07T00:00:00");
+
+const events=[
+
+["2027-08-07","🔴 Kündigung einreichen"],
+
+["2027-08-09","☎️ Rückgewinnung prüfen"],
+
+["2027-09-07","🏁 Vertragsende"],
+
+["2027-11-22","🛍️ Black Friday"]
+
+];
+
+function update(){
+
+const now=new Date();
+
+const diff=Math.max(0,
+
+Math.ceil((target-now)/86400000));
+
+days.textContent=diff+" Tage";
+
+let text="Kein weiterer Termin";
+
+for(const e of events){
+
+if(new Date(e[0])>=now){
+
+text=e[1]+" – "+
+
+new Date(e[0]).toLocaleDateString("de-DE");
+
+break;
+
+}
+
+}
+
+next.textContent="Nächster Termin: "+text;
+
+const start=new Date("2027-01-01");
+
+const p=Math.min(100,
+
+Math.max(0,(now-start)/(target-start)*100));
+
+fill.style.width=p+"%";
+
+bonus.textContent=
+
+localStorage.getItem("c2")==="1"
+
+?"Treuebonus markiert."
+
+:"Treuebonus noch offen.";
+
+}
+
+["c1","c2","c3","c4"].forEach(id=>{
+
+const e=document.getElementById(id);
+
+e.checked=localStorage.getItem(id)==="1";
+
+e.onchange=()=>{
+
+localStorage.setItem(id,
+
+e.checked?"1":"0");
+
+update();
+
+};
+
+});
+
+function cash(){
+
+alert("MeinMagenta öffnen und Cashback prüfen.");
+
+}
+
+function hotline(){
+
+alert(
+
+"Fragen:\n\n• Unlimited?\n• MagentaEINS?\n• 120 € Treuebonus?"
+
+);
+
+}
+
+function reise(){
+
+alert(
+
+"Vor der Reise prüfen:\n\n• 5G+ Ultra\n• MultiSIM\n• EU-Roaming"
+
+);
+
+}
+
+function prio(){
+
+alert(
+
+"MagentaMusik Prio\n\nZAG Arena\nHeinz von Heiden Arena\nExpo Plaza"
+
+);
+
+}
+
+function map(q){
+
+window.open(
+
+"https://maps.apple.com/?q="+
+
+encodeURIComponent(q)
+
+);
+
+}
+
+update();
+
+setInterval(update,60000);
+
+</script>
+
+</body>
+
+</html>
